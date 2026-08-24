@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>搬家實錄與車隊展示 | 坤奇精緻搬家 · 現場品質記錄</title>
-    <meta name="description" content="瀏覽坤奇搬家真實作業紀錄與車隊現場。包含家具加厚防護包裝、大卡車車隊、鋼琴特重物件搬運與客戶實例。">
+    <title>搬家車隊實錄與展示 | 坤奇精緻搬家 · 現場品質記錄</title>
+    <meta name="description" content="瀏覽坤奇搬家真實作業紀錄與車隊現場。包含台北搬家、桃園搬家實錄，家具加厚防護包裝、大卡車車隊、鋼琴特重物件搬運與客戶實例。">
+    <meta name="keywords" content="坤奇搬家, 台北搬家, 桃園搬家, 精緻搬家, 搬家車隊, 搬家估價">
     <link rel="stylesheet" href="css/style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -40,7 +41,10 @@
             <ul id="navMenu">
                 <li><a href="index.html">首頁</a></li>
                 <li><a href="services.html">服務與價目</a></li>
-                <li><a href="gallery.html" class="active">搬家實錄車隊</a></li>
+                <li><a href="gallery.html" class="active">搬家車隊實錄</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="faq.html">常見問題</a></li>
+                <li><a href="blog.html">搬家知識</a></li>
                 <li><a href="contact.html">免費線上估價</a></li>
             </ul>
         </nav>
@@ -51,49 +55,28 @@
 
     <!-- Page Hero Banner -->
     <section class="page-hero">
-        <h1>搬家實錄與車隊展示</h1>
+        <h1>搬家車隊實錄與展示</h1>
         <p>真實呈現每一場搬遷過程的細緻防護與專業態度</p>
     </section>
 
     <!-- Gallery Grid Section -->
     <section class="section-padding">
         <div class="section-title">
-            <h2>作業實境與防護細節</h2>
-            <p>嚴謹工序與專業裝備，細心保護您的珍貴物品</p>
+            <h2>10 大搬家現場實錄與案例解析</h2>
+            <p>嚴謹工序與專業裝備，【坤奇搬家】台北搬家與桃園搬家首選，點擊可閱讀完整現場故事</p>
         </div>
 
-        <div class="gallery-preview-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-            <div class="gallery-preview-item" style="height: 300px;">
-                <img src="images/home_moving.png" alt="沙發與木桌加厚保護毯打包">
-                <div class="overlay"><span>客廳沙發多層伸縮膠膜與保護毯包覆</span></div>
-            </div>
-
-            <div class="gallery-preview-item" style="height: 300px;">
-                <img src="images/hero_bg.png" alt="坤奇搬家車隊陣容">
-                <div class="overlay"><span>坤奇 3.5 噸與 5 噸車隊出勤整備</span></div>
-            </div>
-
-            <div class="gallery-preview-item" style="height: 300px;">
-                <img src="images/office_moving.png" alt="商辦企業辦公桌拆裝與搬運">
-                <div class="overlay"><span>商辦大樓檔案箱與桌椅標籤搬遷</span></div>
-            </div>
-
-            <div class="gallery-preview-item" style="height: 300px;">
-                <img src="images/special_moving.png" alt="鋼琴防護與專業吊袋搬運">
-                <div class="overlay"><span>直立式鋼琴安全背袋專業定位</span></div>
-            </div>
-
-            <div class="gallery-preview-item" style="height: 300px;">
-                <img src="images/home_moving.png" alt="家電與液晶電視防撞護角">
-                <div class="overlay"><span>大型家電防撞氣泡布加強保護</span></div>
-            </div>
-
-            <div class="gallery-preview-item" style="height: 300px;">
-                <img src="images/hero_bg.png" alt="高樓層吊車吊運作業">
-                <div class="overlay"><span>高樓層吊車吊運大型家具安全無虞</span></div>
-            </div>
-        </div>
+        <!-- Dynamic 10 Articles Grid -->
+        <div class="article-grid" id="galleryArticleGrid"></div>
     </section>
+
+    <!-- Modal Popup for Article Reading -->
+    <div class="modal-overlay" id="articleModal">
+        <div class="modal-container">
+            <button class="modal-close-btn" id="modalCloseBtn"><i class="fas fa-times"></i></button>
+            <div id="modalArticleBody"></div>
+        </div>
+    </div>
 
     <!-- Testimonial Section -->
     <section class="section-padding" style="background-color: #F8FAFC;">
@@ -139,8 +122,11 @@
             <div class="footer-col">
                 <h4>快速連結</h4>
                 <ul>
+                    <li><a href="about.html">關於我們</a></li>
                     <li><a href="services.html">服務項目與價目</a></li>
-                    <li><a href="gallery.html">搬家實錄車隊</a></li>
+                    <li><a href="gallery.html">搬家車隊實錄</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                    <li><a href="blog.html">搬家知識專欄</a></li>
                     <li><a href="contact.html">線上估價諮詢</a></li>
                 </ul>
             </div>
@@ -169,6 +155,8 @@
 
     <!-- Main JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/articles.js"></script>
+    <script src="js/gallery-modal.js"></script>
 </body>
 
 </html>
